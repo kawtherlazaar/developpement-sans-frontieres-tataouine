@@ -6,7 +6,7 @@ import {
   deleteActualite,
 } from "../controllers/actualite.controller.js";
 
-import { uploadActualiteImage } from "../middleware/upload/actualiteUpload.middleware.js";
+import { uploadActualiteImage } from "../middleware/uploads/actualiteUpload.middleware.js";
 import { protect } from "../middleware/auth.middleware.js";
 import { isAdmin } from "../middleware/admin.middleware.js";
 

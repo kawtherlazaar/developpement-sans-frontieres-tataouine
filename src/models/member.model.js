@@ -6,17 +6,21 @@ const membreSchema = new mongoose.Schema(
     nomComplet: {
       type: String,
       required: true,
+      trim: true,
     },
 
     email: {
       type: String,
       required: true,
       unique: true,
+      lowercase: true,
+      trim: true,
     },
 
     telephone: {
-      type: String,
+      type: String,   // ✅ بدل Number ➜ String
       required: true,
+      trim: true,
     },
 
     role: {
@@ -25,7 +29,8 @@ const membreSchema = new mongoose.Schema(
     },
 
     cv: {
-      type: String, // chemin du fichier
+      type: String, // path du fichier
+      default: null,
     },
 
     statut: {

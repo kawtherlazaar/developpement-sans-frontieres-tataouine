@@ -6,7 +6,7 @@ import {
   deletePartner,
 } from "../controllers/partner.controller.js";
 
-import { uploadLogo } from "../middleware/upload/logoUpload.middleware.js";
+import { uploadLogo } from "../middleware/uploads/logoUpload.middleware.js";
 import { protect } from "../middleware/auth.middleware.js";
 import { isAdmin } from "../middleware/admin.middleware.js";
 

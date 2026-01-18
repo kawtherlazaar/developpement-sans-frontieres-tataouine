@@ -7,7 +7,7 @@ import {
   getMediaById,
 } from "../controllers/media.controller.js";
 
-import { uploadMedia } from "../middleware/upload/mediaUpload.middleware.js";
+import { uploadMedia } from "../middleware/uploads/mediaUpload.middleware.js";
 import { protect } from "../middleware/auth.middleware.js";
 import { isAdmin } from "../middleware/admin.middleware.js";
 

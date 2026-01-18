@@ -8,7 +8,7 @@ import {
   rejeterMembre,
 } from "../controllers/member.controller.js";
 
-import { uploadCV } from "../middleware/upload/cvUpload.middleware.js";
+
 import { protect } from "../middleware/auth.middleware.js";
 import { isAdmin } from "../middleware/admin.middleware.js";
 
@@ -19,7 +19,6 @@ const router = express.Router();
 ===================================================== */
 router.post(
   "/",
-  uploadCV.single("cv"),
   inscrireMembre
 );
 

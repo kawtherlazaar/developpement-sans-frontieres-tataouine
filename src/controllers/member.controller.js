@@ -9,13 +9,14 @@ import PDFDocument from "pdfkit";
 export const inscrireMembre = async (req, res) => {
   try {
     const { nomComplet, email, telephone } = req.body;
-
-    const membre = await Membre.create({
-      nomComplet,
-      email,
-      telephone,
-      cv: req.file ? req.file.path : null,
-    });
+  const membre = await Membre.create({
+       nomComplet,
+        email,
+         telephone,
+         role: "Bénévole",
+         statut: "en_attente",
+         
+});
 
     res.status(201).json({
       message: "Inscription du bénévole réussie",
